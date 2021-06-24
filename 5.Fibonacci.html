@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fibonacci Series</title>
+    <script>
+        var num=prompt("Please enter the number of terms to be print in a pattern")
+        var firstTerm=0;
+        var secondTearm=1;
+        var nextTearm;
+        for(var count = 1; count <= num; count++){
+            document.write(firstTerm+", ");
+            nextTearm = firstTerm + secondTearm;
+            firstTerm = secondTearm;
+            secondTearm = nextTearm;
+        }
+    </script>
+</head>
+<body>  </body>
+</html>
