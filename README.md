@@ -1,1 +1,1 @@
-HTML and JavaScript Programs
+HTML and JavaScript Programs.
