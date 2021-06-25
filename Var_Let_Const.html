@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <title>var let and const</title>
+    <Script>
+        var val = 10;
+        var count = 7;
+        if (count < 7) {
+            // Here we are re initializing the var which can create a problem if we are not aware about the problem
+            var val = 100; 
+        }
+        // The below line of code will provide output: val=10
+        console.log(`value=${value}`); 
+        let val = 10;
+        var count = 7;
+        if (count < 7) {
+            // Here we are re initializing the let which is not possible (we can redeclare let but not reinitialize)
+            let val = 100; 
+        }
+        // The below line of code will provide  Uncaught SyntaxError: Identifier 'value' has already been declared
+        console.log(`value=${value}`); 
+        // So conclusion is  : let is better choice, because we don't have to worry about that we have already created variable with same name or not
+        // Now we have to understand const: so const neither can be reinitalize nor can be redeclared
+        const val = 10;
+        var count = 7;
+        if (count < 7) {
+            // Here we are re declaring the const which is not possible (we can not redeclare or reinitialize const) 
+            value = 100; 
+        }
+        // The below line of code will provide Uncaught SyntaxError: Identifier 'value' has already been declared
+        console.log(`value=${value}`); 
+        //when we make object using const it work like this
+        const std = {
+            lastname: "Gaurav",
+            age: 23
+        }
+        //we cannot do this:
+        std = {
+            lastname: "Singh",
+            rollno: 171431
+        } 
+        // it will provide error:  Assignment to constant variable.
+        // while we can do this:
+        std.age = 18;
+    </Script>
+</head>
+<body> </body>
+</html>
